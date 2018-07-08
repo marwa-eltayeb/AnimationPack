@@ -1,4 +1,4 @@
-package com.example.marwa.animatedimageview;
+package com.example.marwa.animationsamples;
 
 import org.junit.Test;
 

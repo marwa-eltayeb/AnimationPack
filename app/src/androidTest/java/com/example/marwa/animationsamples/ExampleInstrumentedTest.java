@@ -1,4 +1,4 @@
-package com.example.marwa.animatedimageview;
+package com.example.marwa.animationsamples;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.marwa.animatedimageview", appContext.getPackageName());
+        assertEquals("com.example.marwa.animationsamples", appContext.getPackageName());
     }
 }
