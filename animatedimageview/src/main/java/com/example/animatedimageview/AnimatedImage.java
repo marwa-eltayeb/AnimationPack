@@ -112,8 +112,46 @@ public class AnimatedImage extends ImageView {
         mAnimatedImage.animate().translationYBy(y).setDuration(duration);
     }
 
+    /**
+     * This method rotate the element view to the right (ImageView)
+     */
+    public void rotateToRight() {
+        mAnimatedImage.animate().rotation(360f).setDuration(2000);
+    }
 
+    /**
+     * This method rotate the element view to the left (ImageView)
+     */
+    public void rotateToLeft() {
+        mAnimatedImage.animate().rotation(-360f).setDuration(2000);
+    }
 
+    /**
+     * This method move the element view to the tob or bottom (ImageView)
+     *
+     * @param value    rotate right or left. The value can be positive or negative.
+     * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
+     */
+    public void rotateRightOrLeft(float value, long duration) {
+        mAnimatedImage.animate().rotation(value).setDuration(duration);
+    }
+    
+    /**
+     * This method rotate the element view upside down (ImageView)
+     */
+    public void rotateUpSideDown() {
+        mAnimatedImage.animate().rotation(180f).setDuration(2000);
+    }
+
+    /**
+     * This method move the element view upside down right or left (ImageView)
+     *
+     * @param value    rotate upside down right or left. The value can be positive or negative.
+     * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
+     */
+    public void rotateUpSideDown(float value, long duration) {
+        mAnimatedImage.animate().rotation(value).setDuration(duration);
+    }
 
 
 }
