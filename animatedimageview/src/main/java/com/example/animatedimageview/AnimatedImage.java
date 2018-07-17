@@ -2,9 +2,7 @@ package com.example.animatedimageview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -13,20 +11,22 @@ import android.widget.ImageView;
  */
 
 @SuppressLint("AppCompatCustomView")
-public class AnimatedImage extends ImageView{
+public class AnimatedImage extends ImageView {
 
     AnimatedImage mAnimatedImage = this;
 
+    /*
     public AnimatedImage(Context context) {
         super(context);
-
     }
+    */
 
     public AnimatedImage(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
     }
 
+    /*
     public AnimatedImage(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
@@ -37,20 +37,29 @@ public class AnimatedImage extends ImageView{
         super(context, attrs, defStyleAttr, defStyleRes);
 
     }
+    */
 
 
-    public void scaleIn(){
+    /**
+     * This method grows the element view (ImageView)
+     */
+    public void scaleIn() {
         mAnimatedImage.animate().scaleX(1.1f).scaleY(1.1f).setDuration(2000);
     }
 
 
-    public void scaleIn(float x, float y, long duration){
+    /**
+     * This method grows the element view (ImageView)
+     *
+     * @param x        scale of the view in the x direction
+     * @param y        scale of the view in the y direction
+     * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
+     */
+    public void scaleIn(float x, float y, long duration) {
         mAnimatedImage.animate().scaleX(x).scaleY(y).setDuration(duration);
     }
 
 }
-
-
 
 
 //https://developer.android.com/studio/projects/android-library
