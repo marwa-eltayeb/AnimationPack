@@ -39,7 +39,6 @@ public class AnimatedImage extends ImageView {
     }
     */
 
-
     /**
      * This method grows the element view (ImageView)
      */
@@ -47,17 +46,75 @@ public class AnimatedImage extends ImageView {
         mAnimatedImage.animate().scaleX(1.1f).scaleY(1.1f).setDuration(2000);
     }
 
+    /**
+     * This method shrinks the element view (ImageView)
+     */
+    public void scaleOut() {
+        mAnimatedImage.animate().scaleX(0.7f).scaleY(0.7f).setDuration(2000);
+    }
 
     /**
-     * This method grows the element view (ImageView)
+     * This method grows or shrinks the element view (ImageView)
      *
      * @param x        scale of the view in the x direction
      * @param y        scale of the view in the y direction
      * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
      */
-    public void scaleIn(float x, float y, long duration) {
+    public void scale(float x, float y, long duration) {
         mAnimatedImage.animate().scaleX(x).scaleY(y).setDuration(duration);
     }
+
+    /**
+     * This method move the element view to the right (ImageView)
+     */
+    public void moveToRight() {
+        mAnimatedImage.animate().translationXBy(60f).setDuration(1000);
+    }
+
+    /**
+     * This method move the element view to the left (ImageView)
+     */
+    public void moveToLeft() {
+        mAnimatedImage.animate().translationXBy(-60f).setDuration(1000);
+    }
+
+    /**
+     * This method move the element view to the right or left (ImageView)
+     *
+     * @param x        the amount to be animated by horizontally. The value can be positive or negative.
+     * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
+     */
+    public void moveToRightOrLeft(float x, long duration) {
+        mAnimatedImage.animate().translationXBy(x).setDuration(duration);
+    }
+
+    /**
+     * This method move the element view to the bottom (ImageView)
+     */
+    public void moveToBottom() {
+        mAnimatedImage.animate().translationYBy(60f).setDuration(1000);
+    }
+
+    /**
+     * This method move the element view to the top (ImageView)
+     */
+    public void moveToTop() {
+        mAnimatedImage.animate().translationYBy(-60f).setDuration(1000);
+    }
+
+    /**
+     * This method move the element view to the tob or bottom (ImageView)
+     *
+     * @param y        the amount to be animated by vertically. The value can be positive or negative.
+     * @param duration The length of ensuing property animations, in milliseconds. The value cannot be negative.
+     */
+    public void moveToTobOrBottom(float y, long duration) {
+        mAnimatedImage.animate().translationYBy(y).setDuration(duration);
+    }
+
+
+
+
 
 }
 
