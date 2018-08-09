@@ -1,4 +1,4 @@
-package com.example.animatedimageview;
+package com.example.animationpack;
 
 import org.junit.Test;
 
